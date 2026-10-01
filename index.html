@@ -281,6 +281,77 @@
             margin: 6px 0;
         }
 
+        .route-container {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+.address-box {
+    background: var(--light-blue);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 25px;
+}
+
+.address-box h3 {
+    margin-top: 0;
+    color: var(--dark-blue);
+    font-size: 1.2rem;
+}
+
+.address-box p {
+    margin-bottom: 20px;
+}
+
+.address-box a {
+    color: var(--dark-blue);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.map-container {
+    min-height: 360px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    background: #eaf4fa;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    border: 0;
+}
+
+.map-link {
+    margin-top: 10px;
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.map-link a {
+    color: var(--blue);
+}
+
+@media (max-width: 700px) {
+    .route-container {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container,
+    .map-container iframe {
+        min-height: 300px;
+    }
+
+    .map-link {
+        text-align: left;
+    }
+}
+
+
         @media (max-width: 700px) {
             .header-inner {
                 flex-direction: column;
@@ -339,7 +410,7 @@
         <div class="nav-inner">
             <a href="#sprechzeiten">Sprechzeiten</a>
             <a href="#leistungen">Leistungen</a>
-            <a href="#kontakt">Kontakt</a>
+            <a href="#anfahrt">Anfahrt</a>
             <a href="#bereitschaft">Bereitschaftsdienst</a>
             <a href="#impressum">Impressum</a>
         </div>
@@ -408,6 +479,45 @@
     </div>
 </section>
 
+<section id="anfahrt">
+    <h2>Anfahrt</h2>
+
+    <div class="route-container">
+
+        <div class="address-box">
+            <h3>Tierärztliche Praxis</h3>
+
+            <p>
+                <strong>Dipl.-vet.-med. Kurt Sommerfeld</strong><br>
+                Ruppiner Straße 9c<br>
+                16775 Gransee
+            </p>
+
+            <p>
+                <strong>Telefon:</strong><br>
+                <a href="tel:+49330621575">03306 - 21575</a>
+            </p>
+        </div>
+
+        <div class="map-container">
+            <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=13.1455%2C53.0055%2C13.1515%2C53.0095&amp;layer=mapnik&amp;marker=53.0072%2C13.1483"
+                title="Karte – Ruppiner Straße 9c, 16775 Gransee"
+                loading="lazy">
+            </iframe>
+        </div>
+
+    </div>
+
+    <p class="map-link">
+        <a
+            href="https://www.openstreetmap.org/?mlat=53.0072&amp;mlon=13.1483#map=18/53.0072/13.1483"
+            target="_blank"
+            rel="noopener noreferrer">
+            Größere Karte auf OpenStreetMap anzeigen
+        </a>
+    </p>
+</section>
 
 
     <section id="leistungen">
