@@ -1,1 +1,456 @@
-Testseite
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tierarzt Dipl.-vet.-med. Kurt Sommerfeld – Gransee</title>
+    <meta name="description"
+          content="Tierarzt Dipl.-vet.-med. Kurt Sommerfeld in Gransee. Allgemeinmedizin, Operationen, Vorsorge, Röntgen, Ultraschall, Labor und Zahnbehandlungen.">
+
+    <style>
+        :root {
+            --dark-blue: #173b56;
+            --blue: #285d7c;
+            --light-blue: #eaf4fa;
+            --very-light-blue: #f5f9fc;
+            --text: #263640;
+            --white: #ffffff;
+            --border: #d5e3eb;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--dark-blue);
+            color: var(--white);
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 25px 24px;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .logo {
+            width: 135px;
+            height: 135px;
+            object-fit: contain;
+            background: white;
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        .header-text h1 {
+            margin: 0 0 6px;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        .header-text p {
+            margin: 0;
+            font-size: 1.05rem;
+            color: #dceaf2;
+        }
+
+        nav {
+            background: #102f45;
+            border-top: 1px solid rgba(255,255,255,0.12);
+        }
+
+        nav .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 13px 18px;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            background: var(--blue);
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 45px 24px 60px;
+        }
+
+        section {
+            margin-bottom: 55px;
+        }
+
+        h2 {
+            color: var(--dark-blue);
+            font-size: 1.55rem;
+            font-weight: 500;
+            margin: 0 0 24px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-blue);
+        }
+
+        .intro {
+            background: var(--very-light-blue);
+            border-left: 5px solid var(--blue);
+            padding: 24px 28px;
+            margin-bottom: 45px;
+        }
+
+        .intro p {
+            margin: 0;
+            font-size: 1.05rem;
+        }
+
+        .columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--light-blue);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 25px;
+        }
+
+        .card h3 {
+            color: var(--dark-blue);
+            margin-top: 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .hours {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        .hours td {
+            padding: 9px 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hours td:first-child {
+            font-weight: bold;
+            width: 80px;
+            color: var(--dark-blue);
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px 35px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .services li {
+            position: relative;
+            padding: 12px 15px 12px 32px;
+            background: var(--very-light-blue);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+        }
+
+        .services li::before {
+            content: "✓";
+            position: absolute;
+            left: 12px;
+            color: var(--blue);
+            font-weight: bold;
+        }
+
+        .contact-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-item {
+            padding: 25px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: var(--dark-blue);
+            margin-bottom: 8px;
+        }
+
+        .phone {
+            font-size: 1.3rem;
+            color: var(--dark-blue);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .emergency {
+            background: #f1f6f9;
+            border-left: 5px solid var(--dark-blue);
+            padding: 22px 25px;
+        }
+
+        .emergency strong {
+            color: var(--dark-blue);
+        }
+
+        footer {
+            background: var(--dark-blue);
+            color: #dceaf2;
+            padding: 35px 24px;
+        }
+        .subheading {
+    margin-top: 28px !important;
+}
+
+.notice-box {
+    min-height: 95px;
+    padding: 14px;
+    background: #ffffff;
+    border: 1px solid #b8cedc;
+    border-radius: 5px;
+    color: #526774;
+    outline: none;
+}
+
+.notice-box:focus {
+    border-color: #285d7c;
+    box-shadow: 0 0 0 2px rgba(40, 93, 124, 0.12);
+}
+
+.notice-box:empty::before {
+    content: "Eintragung hier vornehmen ...";
+    color: #9aaab3;
+}
+
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        footer h2 {
+            color: white;
+            border-color: rgba(255,255,255,0.2);
+            font-size: 1.25rem;
+        }
+
+        footer p {
+            margin: 6px 0;
+        }
+
+        @media (max-width: 700px) {
+            .header-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo {
+                width: 110px;
+                height: 110px;
+            }
+
+            .header-text h1 {
+                font-size: 1.55rem;
+            }
+
+            nav .nav-inner {
+                justify-content: center;
+            }
+
+            nav a {
+                padding: 10px 11px;
+                font-size: 0.88rem;
+            }
+
+            .columns,
+            .contact-box,
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            main {
+                padding-top: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+
+        <!-- Das beigefügte Logo als "logo.png" speichern -->
+        <img src="logo.png"
+             alt="Logo der Tierarztpraxis"
+             class="logo">
+
+        <div class="header-text">
+            <h1>Dipl.-vet.-med. Kurt Sommerfeld</h1>
+            <p>Tierärztliche Praxis in Gransee</p>
+        </div>
+
+    </div>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="#sprechzeiten">Sprechzeiten</a>
+            <a href="#leistungen">Leistungen</a>
+            <a href="#kontakt">Kontakt</a>
+            <a href="#bereitschaft">Bereitschaftsdienst</a>
+            <a href="#impressum">Impressum</a>
+        </div>
+    </nav>
+</header>
+
+
+<main>
+
+    <div class="intro">
+        <p>
+            Willkommen in der tierärztlichen Praxis von
+            <strong>Dipl.-vet.-med. Kurt Sommerfeld</strong>
+            in Gransee.
+        </p>
+    </div>
+
+
+    <section id="sprechzeiten">
+    <h2>Sprechzeiten</h2>
+
+    <div class="columns">
+
+        <div class="card">
+            <h3>Praxiszeiten</h3>
+
+            <table class="hours">
+                <tr>
+                    <td>Mo.</td>
+                    <td>10:30–12:00 Uhr<br>16:00–18:00 Uhr</td>
+                </tr>
+                <tr>
+                    <td>Di.</td>
+                    <td>16:00–18:00 Uhr</td>
+                </tr>
+                <tr>
+                    <td>Mi.</td>
+                    <td>10:30–12:00 Uhr<br>16:00–18:00 Uhr</td>
+                </tr>
+                <tr>
+                    <td>Do.</td>
+                    <td>16:00–18:00 Uhr</td>
+                </tr>
+                <tr>
+                    <td>Fr.</td>
+                    <td>10:30–12:00 Uhr</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3>Urlaub</h3>
+
+            <div class="notice-box" contenteditable="true">
+                Hier können Urlaubshinweise eingetragen werden.
+            </div>
+
+            <h3 class="subheading">Sonstiges</h3>
+
+            <div class="notice-box" contenteditable="true">
+                Hier können sonstige Hinweise eingetragen werden.
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+    <section id="leistungen">
+        <h2>Leistungen</h2>
+
+        <ul class="services">
+            <li>Tierärztliche Apotheke</li>
+            <li>Allgemeinmedizin</li>
+            <li>Operationen</li>
+            <li>Krankheitsvorsorge</li>
+            <li>Schutzimpfungen</li>
+            <li>Parasitenbehandlung</li>
+            <li>Röntgen mit digitaler Technik</li>
+            <li>Ultraschalluntersuchungen</li>
+            <li>Laboruntersuchungen</li>
+            <li>Zahnbehandlungen</li>
+            <li>Zahnsteinentfernung</li>
+            <li>Elektronische Tierkennzeichnung</li>
+            <li>Ausstellung von EU-Heimtierausweisen</li>
+        </ul>
+    </section>
+
+
+    <section id="bereitschaft">
+        <h2>Bereitschaftsdienst</h2>
+
+        <div class="emergency">
+            <strong>Bereitschaftsdienst Kleintiere</strong><br>
+            <a class="phone" href="tel:01805843736">
+                0180 5843736
+            </a>
+        </div>
+    </section>
+
+</main>
+
+
+<footer id="impressum">
+    <div class="footer-inner">
+
+        <h2>Impressum</h2>
+
+        <p>
+            <strong>Dipl.-vet.-med. Kurt Sommerfeld</strong>
+        </p>
+
+        <p>
+            Ruppiner Straße 9c<br>
+            16775 Gransee
+        </p>
+
+        <p>
+            Telefon: 03306 - 21575
+        </p>
+
+    </div>
+</footer>
+
+</body>
+</html>
+
